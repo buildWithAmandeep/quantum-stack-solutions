@@ -9,6 +9,36 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("lite");
   }
 
+  const navToggle = document.querySelector(".nav-toggle");
+  const nav = document.getElementById("primary-nav");
+  if (navToggle && nav) {
+    const setNavState = (isOpen) => {
+      document.body.classList.toggle("nav-open", isOpen);
+      navToggle.setAttribute("aria-expanded", String(isOpen));
+    };
+
+    navToggle.addEventListener("click", () => {
+      const isOpen = !document.body.classList.contains("nav-open");
+      setNavState(isOpen);
+    });
+
+    nav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => setNavState(false));
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setNavState(false);
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 760) {
+        setNavState(false);
+      }
+    });
+  }
+
   document.querySelectorAll(".section").forEach((section) => {
     const items = section.querySelectorAll(".reveal");
     items.forEach((item, index) => {
