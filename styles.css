@@ -83,6 +83,13 @@ body::before {
   );
 }
 
+.lite .grid-overlay {
+  animation: none;
+  opacity: 0.04;
+  mask-image: none;
+  -webkit-mask-image: none;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -359,6 +366,10 @@ a {
   pointer-events: none;
 }
 
+.lite .hero-visual::after {
+  animation: none;
+}
+
 .holo-stack {
   position: relative;
   display: grid;
@@ -580,6 +591,15 @@ a {
   right: -40px;
   border-color: rgba(111, 141, 255, 0.28);
   animation-delay: 1.2s;
+}
+
+.lite .holo-card::before,
+.lite .holo-card::after,
+.lite .status-dot,
+.lite .signal-ring,
+.lite .signal-graph .bar,
+.lite .signal-graph .line {
+  animation: none;
 }
 
 .scroll-indicator {
@@ -891,6 +911,16 @@ a {
   color: var(--muted);
 }
 
+.lite .hero-content,
+.lite .card,
+.lite .solution-card,
+.lite .insight-card,
+.lite .cta-panel,
+.lite .holo-card,
+.lite .hero-metrics > div {
+  backdrop-filter: none;
+}
+
 .parallax-field {
   position: fixed;
   inset: 0;
@@ -943,6 +973,10 @@ a {
   will-change: transform;
 }
 
+.lite .parallax {
+  transform: none;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -970,6 +1004,10 @@ a {
   opacity: 0.6;
   animation: glowPulse 6s ease-in-out infinite;
   z-index: 1;
+}
+
+.lite .glow-line {
+  animation: none;
 }
 
 .glow-line-a {

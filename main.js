@@ -4,6 +4,10 @@ const prefersReducedMotion = window.matchMedia(
 
 document.addEventListener("DOMContentLoaded", () => {
   document.body.classList.remove("preload");
+  const isMobile = window.matchMedia("(max-width: 900px)").matches;
+  if (isMobile) {
+    document.body.classList.add("lite");
+  }
 
   document.querySelectorAll(".section").forEach((section) => {
     const items = section.querySelectorAll(".reveal");
@@ -44,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  if (prefersReducedMotion) {
+  if (prefersReducedMotion || isMobile) {
     return;
   }
 
