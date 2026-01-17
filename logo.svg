@@ -1,0 +1,56 @@
+<svg
+  width="48"
+  height="48"
+  viewBox="0 0 64 64"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <linearGradient
+      id="qsGradient"
+      x1="8"
+      y1="8"
+      x2="56"
+      y2="56"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0" stop-color="#4deee8" />
+      <stop offset="1" stop-color="#6f8dff" />
+    </linearGradient>
+  </defs>
+  <rect
+    x="10"
+    y="10"
+    width="24"
+    height="24"
+    rx="6"
+    stroke="url(#qsGradient)"
+    stroke-width="3"
+  />
+  <rect
+    x="20"
+    y="20"
+    width="24"
+    height="24"
+    rx="6"
+    stroke="url(#qsGradient)"
+    stroke-width="3"
+    opacity="0.85"
+  />
+  <rect
+    x="30"
+    y="30"
+    width="24"
+    height="24"
+    rx="6"
+    stroke="url(#qsGradient)"
+    stroke-width="3"
+    opacity="0.65"
+  />
+  <path
+    d="M14 20 L20 14"
+    stroke="#ffb86b"
+    stroke-width="3"
+    stroke-linecap="round"
+  />
+</svg>
